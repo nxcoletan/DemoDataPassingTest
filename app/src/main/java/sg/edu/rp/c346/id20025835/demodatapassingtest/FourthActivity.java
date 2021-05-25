@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class ThirdActivity extends AppCompatActivity {
-    TextView tvAnswer2;
+public class FourthActivity extends AppCompatActivity {
+    TextView tvAnswer3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_fourth);
 
-        tvAnswer2 = findViewById(R.id.textView2);
+        tvAnswer3 = findViewById(R.id.textView4);
         Intent intentReceived = getIntent();
-        char value = intentReceived.getCharExtra("Character", 'a');
-        tvAnswer2.setText("Integer value received is: " + value);
+        double value = intentReceived.getDoubleExtra("double", 99.99);
+        tvAnswer3.setText("Double value received is: " + value);
     }
 }
